@@ -46,7 +46,9 @@ export class ImageController {
 
    @Get('/view/:filename')
   viewImage(@Param('filename') filename: string, @Res() res: Response) {
-    const filePath = join(__dirname, '..','..', 'uploads', filename);
+  
+    const filePath = join(__dirname, '..','..','..','uploads', filename);
+    console.log(filePath)
     if (existsSync(filePath)) {
       const fileStream = createReadStream(filePath);
       fileStream.pipe(res);
