@@ -10,10 +10,10 @@ export class InterestService {
     
     async getRandomInterest() {
       return this.prisma.$queryRaw<interest[]>
-      ` SELECT *
+      `SELECT *
         FROM interest
-        ORDER BY RAND()
-        LIMIT 10 
+        ORDER BY RANDOM()
+        LIMIT 10;
       `  
     }
 
