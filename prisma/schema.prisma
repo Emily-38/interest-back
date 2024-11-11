@@ -14,7 +14,7 @@ model user {
   email String @unique
   pseudo String @unique
   password String @db.VarChar(255)
-  age Int @db.Int()
+  age Int 
   gender String @db.VarChar(255)
   profile_image String? @db.VarChar(255)
   gdpr DateTime @default(now())
